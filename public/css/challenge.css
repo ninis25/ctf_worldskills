@@ -1,0 +1,1234 @@
+.challenge-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+}
+
+.challenge-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.points {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.challenge-description {
+    margin-bottom: 2rem;
+}
+
+.encrypted-message {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.hints-section {
+    background: rgba(37, 99, 235, 0.1);
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.hint {
+    color: var(--gray);
+}
+
+.hint-item {
+    margin: 1rem 0;
+}
+
+.hint-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.hint-icon {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.hint-cost {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hint-cost.free {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.hint-content {
+    position: relative;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin-top: 0.75rem;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.hint-content.locked {
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+.hint-lock-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.hint-lock-overlay i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fbbf24;
+}
+
+.hint-text {
+    line-height: 1.6;
+}
+
+.hint-count {
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.progress {
+    height: 0.75rem;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    transition: all 0.3s ease;
+}
+
+.tools-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+}
+
+.tools-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tools-section li {
+    margin: 0.5rem 0;
+}
+
+.tools-section a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.tools-section a:hover {
+    text-decoration: underline;
+}
+
+.submit-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+#result-message {
+    margin-top: 1rem;
+}
+
+.success-message {
+    color: #22c55e;
+    padding: 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border-radius: 6px;
+}
+
+.error-message {
+    color: #ef4444;
+    padding: 1rem;
+    background: rgba(239, 68, 68, 0.1);
+    border-radius: 6px;
+}
+
+.score-details {
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+.score-details p {
+    margin: 0.5rem 0;
+}
+
+.final-score {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.score-summary {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-outline-primary {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Styles supplémentaires pour les indices */
+.hint-button.solution {
+    border: 1px solid #ef4444;
+}
+
+.hint-cost.warning {
+    background: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    font-weight: bold;
+}
+
+.hint-text ul, .hint-text ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.hint-text li {
+    margin: 0.25rem 0;
+}
+
+.hint-lock-overlay small {
+    margin-top: 0.5rem;
+    opacity: 0.8;
+}
+
+.hint-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hint-button:active {
+    transform: translateY(0);
+}
+
+.hint-content {
+    transition: all 0.3s ease;
+}
+
+.hint-content.locked {
+    position: relative;
+    filter: blur(3px);
+    pointer-events: none;
+}
+
+.hint-content.locked .hint-lock-overlay {
+    pointer-events: auto;
+    cursor: not-allowed;
+}
+
+.hint-lock-overlay {
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.notification-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
+}
+
+.notification-buttons button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.notification-buttons .confirm-hint {
+    background: #22c55e;
+    color: white;
+}
+
+.notification-buttons .cancel-hint {
+    background: #ef4444;
+    color: white;
+}
+
+.penalty-alert {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #ef4444;
+    padding: 1rem 1.25rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    animation: slidePenalty 0.3s ease;
+}
+
+.penalty-alert i {
+    font-size: 1.25rem;
+}
+
+@keyframes slidePenalty {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Styles pour les notifications */
+#notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+}
+
+.custom-notification {
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.notification-warning {
+    border-color: #fbbf24;
+}
+
+.notification-success {
+    border-color: #22c55e;
+}
+
+.notification-error {
+    border-color: #ef4444;
+}
+
+.notification-info {
+    border-color: #3b82f6;
+}
+
+.notification-content {
+    margin: 0 1rem;
+}
+
+.notification-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.notification-message {
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes unlockHint {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Affichage des pénalités */
+#penalty-display {
+    margin: 1rem 0;
+}
+
+/* Styles pour l'image du challenge de stéganographie */
+.image-container {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.challenge-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+}
+
+.challenge-image:hover {
+    transform: scale(1.02);
+}
+
+.image-container .btn-outline-primary {
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.image-container .btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour la section d'outils */
+.tools-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.tools-section h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.tools-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tools-section li {
+    margin: 0.75rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.tools-section li:before {
+    content: '🔧';
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tools-section a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tools-section a:hover {
+    color: var(--dark);
+    transform: translateX(5px);
+}
+
+/* Style pour le conteneur de notification spécifique à la stéganographie */
+.notification-stego {
+    background: rgba(0, 0, 0, 0.95);
+    border-left-color: #6366f1;
+}
+
+.notification-stego .notification-title {
+    color: #6366f1;
+}
+
+/* Animation de zoom pour l'image */
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+    }
+}
+
+/* Modal pour l'image en plein écran */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: zoom-out;
+    padding: 2rem;
+}
+
+.image-modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+    animation: zoomIn 0.3s ease;
+}
+
+/* Styles pour les boutons d'action */
+.action-buttons {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.action-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.action-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .image-container {
+        padding: 1rem;
+    }
+
+    .tools-section {
+        padding: 1rem;
+    }
+
+    .image-modal {
+        padding: 1rem;
+    }
+
+    .action-buttons {
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
+
+/* Animation pour le chargement de l'image */
+.challenge-image {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Styles pour le formulaire de connexion factice */
+.fake-login-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+}
+
+.fake-login-form h3 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.fake-login-form input {
+    background: #fff;
+    border: 1px solid #d1d5db;
+    transition: all 0.2s ease;
+}
+
+.fake-login-form input:disabled {
+    background: #e9ecef;
+    cursor: not-allowed;
+}
+
+.fake-login-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Style pour la section web */
+.web-container {
+    position: relative;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+/* Animation pour le formulaire */
+.fake-login-form {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les messages d'erreur/succès */
+.error-message, .success-message {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease;
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #ef4444;
+}
+
+.success-message {
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 4px solid #22c55e;
+    color: #22c55e;
+}
+
+/* Style pour les outils de développement suggérés */
+.tools-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary);
+}
+
+.tools-section li {
+    display: flex;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+.tools-section li:before {
+    content: '🔧';
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .fake-login-form {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .web-container {
+        padding: 0.5rem;
+    }
+}
+
+/* Animation pour les notifications */
+.notification-web {
+    background: rgba(0, 0, 0, 0.95);
+    border-left-color: #3b82f6;
+}
+
+.notification-web .notification-title {
+    color: #3b82f6;
+}
+
+/* Style pour le bouton de soumission */
+.submit-section button {
+    transition: all 0.2s ease;
+}
+
+.submit-section button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style pour les indices déverrouillés */
+.hint-content:not(.locked) {
+    animation: unlockHint 0.3s ease;
+}
+
+@keyframes unlockHint {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Styles pour le conteneur de fichier pcap */
+.pcap-file {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.pcap-file:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pcap-file i {
+    font-size: 2.5rem;
+    color: #3b82f6;
+    margin-bottom: 1rem;
+}
+
+.pcap-file p {
+    color: var(--dark);
+    font-family: monospace;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+}
+
+/* Style pour le bouton de téléchargement */
+.pcap-file .btn-outline-primary {
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.pcap-file .btn-outline-primary:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+/* Style pour la section réseau */
+.network-container {
+    position: relative;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.network-container h3 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+}
+
+/* Animation pour le fichier pcap */
+.pcap-file {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour les notifications spécifiques au réseau */
+.notification-network {
+    background: rgba(0, 0, 0, 0.95);
+    border-left-color: #3b82f6;
+}
+
+.notification-network .notification-title {
+    color: #3b82f6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .pcap-file {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .pcap-file i {
+        font-size: 2rem;
+    }
+
+    .network-container {
+        padding: 0.5rem;
+    }
+}
+
+/* Style pour les outils suggérés */
+.tools-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #3b82f6;
+}
+
+.tools-section li {
+    display: flex;
+    align-items: center;
+    margin: 0.75rem 0;
+}
+
+.tools-section li:before {
+    content: '🔧';
+    margin-right: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.tools-section a {
+    color: #3b82f6;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tools-section a:hover {
+    color: var(--dark);
+    transform: translateX(5px);
+}
+
+/* Style pour le badge intermédiaire */
+.badge.bg-warning {
+    background-color: #f59e0b !important;
+    font-weight: 500;
+}
+
+/* Animation de pulsation pour l'icône de téléchargement */
+.pcap-file i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Style pour le survol des boutons d'action */
+.action-button:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+/* Style pour les messages d'erreur/succès */
+.error-message, .success-message {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease;
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #ef4444;
+}
+
+.success-message {
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 4px solid #22c55e;
+    color: #22c55e;
+}
+
+/* Styles pour le formulaire SQL */
+.sql-login-form {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #e5e7eb;
+}
+
+.sql-query-info {
+    background: #1a1a1a;
+    color: #00ff00;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+}
+
+.sql-query-info p {
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.sql-query-info code {
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-all;
+    color: #00ff00;
+}
+
+.query-display {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.query-display p {
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.query-display code {
+    color: #00ff00;
+    display: block;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+/* Styles pour les alertes de résultat SQL */
+.alert {
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    animation: slideIn 0.3s ease;
+}
+
+.alert-success {
+    background: rgba(34, 197, 94, 0.1);
+    border-left: 4px solid #22c55e;
+    color: #166534;
+}
+
+.alert-danger {
+    background: rgba(239, 68, 68, 0.1);
+    border-left: 4px solid #ef4444;
+    color: #991b1b;
+}
+
+.alert h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* Animation pour les résultats */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style pour le formulaire de connexion */
+.sql-login-form input {
+    background: white;
+    border: 1px solid #d1d5db;
+    transition: all 0.2s ease;
+}
+
+.sql-login-form input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.sql-login-form button {
+    width: 100%;
+    margin-top: 1rem;
+    transition: all 0.2s ease;
+}
+
+.sql-login-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sql-login-form {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .sql-query-info, .query-display {
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Styles pour le terminal */
+.terminal-window {
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: #2d2d2d;
+    padding: 0.5rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-button.red {
+    background: #ff5f56;
+}
+
+.terminal-button.yellow {
+    background: #ffbd2e;
+}
+
+.terminal-button.green {
+    background: #27c93f;
+}
+
+.terminal-title {
+    color: #999;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.terminal-content {
+    position: relative;
+    padding: 1rem;
+    color: #fff;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    cursor: text;
+    background: #1a1a1a;
+    font-family: 'Courier New', monospace;
+}
+
+.terminal-line {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.terminal-line .prompt {
+    color: #27c93f;
+    margin-right: 0.5rem;
+    user-select: none;
+}
+
+.terminal-input {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    height: 0;
+}
+
+.terminal-output {
+    color: #ddd;
+    margin: 0.5rem 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.current-line {
+    position: relative;
+}
+
+.current-line::after {
+    content: '█';
+    animation: blink 1s step-end infinite;
+    color: #fff;
+    margin-left: 0.2rem;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Style pour le survol du terminal */
+.terminal-content:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Scrollbar personnalisée pour le terminal */
+.terminal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 4px;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Couleurs pour les fichiers et dossiers */
+.directory {
+    color: #3b82f6;
+}
+
+.file {
+    color: #ddd;
+}
+
+/* Responsive design pour le terminal */
+@media (max-width: 768px) {
+    .terminal-window {
+        max-width: 100%;
+        margin: 0 0.5rem;
+    }
+
+    .terminal-content {
+        min-height: 200px;
+        max-height: 300px;
+    }
+
+    .terminal-button {
+        width: 10px;
+        height: 10px;
+    }
+} 

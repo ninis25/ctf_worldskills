@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>WorldSkills - IUT Nord Franche-Comté - R&T</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="terminal-overlay"></div>
+    <div class="matrix-rain"></div>
+    
+    <div id="notification-container"></div>
+    
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo_iut.png" alt="Logo IUT" class="logo logo-iut">
+                <img src="images/logo_rt.png" alt="Logo R&T" class="logo logo-rt">
+                <div class="nav-titles">
+                    <h1 class="nav-title">Présentation WorldSkills 2025</h1>
+                    <p class="nav-subtitle">Département Réseaux & Télécoms</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="welcome-card">
+            <h2>Bienvenue dans l'univers des Réseaux & Télecom</h2>
+            <p class="lead">Découvrez la cybersécurité à travers notre CTF spécialement conçu pour vous !</p>
+            <div class="event-info">
+                <div class="info-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Le 19 & 20 mars 2025</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>IUT Nord Franche-Comté - Montbéliard</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="score-tracker">
+            <div class="score-card">
+                <div class="score-info">
+                    <h3>Votre Score</h3>
+                    <div class="score-display">
+                        <span id="currentScore">0</span>
+                        <span class="total-possible">/ 375</span>
+                    </div>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar" id="scoreProgress" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div class="score-actions">
+                    <button class="reset-button" id="resetScore">
+                        <i class="fas fa-redo"></i> Réinitialiser
+                    </button>
+                </div>
+            </div>
+            <div class="completed-challenges" id="completedChallenges">
+                <!-- Les challenges complétés s'afficheront ici -->
+            </div>
+        </div>
+
+        <div class="section-title">
+            <h2>Challenges de Cybersécurité</h2>
+            <p>Testez vos compétences sur 6 défis passionnants</p>
+        </div>
+
+        <div class="challenges-grid">
+            <!-- Challenge 1: Cryptographie -->
+            <div class="challenge-box" data-difficulty="easy">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>Cryptographie</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge easy">Débutant</span>
+                    </div>
+                    <p>Déchiffrez un message codé simple en utilisant une méthode de substitution basique.</p>
+                    <div class="challenge-info">
+                        <span class="points">50 pts</span>
+                        <span class="category">Crypto</span>
+                    </div>
+                    <a href="/challenge/1" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Challenge 2: Stéganographie -->
+            <div class="challenge-box" data-difficulty="easy">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Stéganographie</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge easy">Débutant</span>
+                    </div>
+                    <p>Trouvez un message caché dans une image en utilisant des outils simples.</p>
+                    <div class="challenge-info">
+                        <span class="points">50 pts</span>
+                        <span class="category">Stégo</span>
+                    </div>
+                    <a href="/challenge/2" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Challenge 3: Web -->
+            <div class="challenge-box" data-difficulty="easy">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge easy">Débutant</span>
+                    </div>
+                    <p>Inspectez le code source d'une page web pour trouver des informations cachées.</p>
+                    <div class="challenge-info">
+                        <span class="points">50 pts</span>
+                        <span class="category">Web</span>
+                    </div>
+                    <a href="/challenge/3" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Challenge 4: Réseau -->
+            <div class="challenge-box" data-difficulty="medium">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Réseau</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge medium">Intermédiaire</span>
+                    </div>
+                    <p>Analysez une capture réseau simple pour trouver un mot de passe.</p>
+                    <div class="challenge-info">
+                        <span class="points">75 pts</span>
+                        <span class="category">Network</span>
+                    </div>
+                    <a href="/challenge/4" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Challenge 5: SQL -->
+            <div class="challenge-box" data-difficulty="medium">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>SQL</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge medium">Intermédiaire</span>
+                    </div>
+                    <p>Découvrez les bases de l'injection SQL sur un exemple simple.</p>
+                    <div class="challenge-info">
+                        <span class="points">75 pts</span>
+                        <span class="category">SQL</span>
+                    </div>
+                    <a href="/challenge/5" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Challenge 6: Système -->
+            <div class="challenge-box" data-difficulty="medium">
+                <div class="challenge-content">
+                    <div class="challenge-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>Système</h3>
+                    <div class="challenge-difficulty">
+                        <span class="difficulty-badge medium">Intermédiaire</span>
+                    </div>
+                    <p>Trouvez un fichier caché dans l'arborescence du système.</p>
+                    <div class="challenge-info">
+                        <span class="points">75 pts</span>
+                        <span class="category">System</span>
+                    </div>
+                    <a href="/challenge/6" class="start-button">
+                        Commencer
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <img src="images/logo_iut.png" alt="Logo IUT" class="footer-logo">
+                    <img src="images/logo_rt.png" alt="Logo R&T" class="footer-logo">
+                </div>
+                <div class="footer-info">
+                    <p>IUT Nord Franche-Comté - Département R&T</p>
+                    <p>4 Place Tharradin, 25200 Montbéliard</p>
+                    <p><a href="https://www.iut-nfc.univ-fcomte.fr/" target="_blank">www.iut-nfc.univ-fcomte.fr</a></p>
+                    <p class="credits">CTF avec ❤️ par Anisse FOUKA - BUT R&T 2025</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/ninis25" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anisse-fouka-825b43254/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
